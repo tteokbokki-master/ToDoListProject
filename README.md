@@ -10,7 +10,7 @@
 
 
 ## 알게 된 점
-- [STUDYHARD]()
+- [STUDYHARD](/STUDYHARD.md)
 
 
 ## 🔥이건 꼭 지키자🔥

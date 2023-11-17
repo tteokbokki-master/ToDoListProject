@@ -1,0 +1,17 @@
+.TodoEditor{
+  display: flex;
+  width: 100%;
+}
+
+.TodoEditor-input{
+  flex:10;
+  padding : 15px;
+  border-radius: 7px;
+  border: 1px solid lightgray;
+}
+
+.TodoEditor-button{
+  flex:1.5;
+  border-radius: 7px;
+  border: 1px solid lightgray;
+}

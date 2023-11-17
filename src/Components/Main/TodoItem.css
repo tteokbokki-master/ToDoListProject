@@ -1,0 +1,22 @@
+.TodoItem{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.TodoItem-content{
+  text-align: center;
+  flex: 1;
+  font-weight: bold;
+}
+
+.TodoItem-EdiBtn{
+  margin-right: 3px;
+}
+.TodoItem-EdiBtn, .TodoItem-DelBtn{
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid lightgray;
+  font-weight: bold;
+}
+

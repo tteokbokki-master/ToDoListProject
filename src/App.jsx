@@ -1,10 +1,10 @@
-import './App.css'
+import Home from "./Pages/Home"
 
 function App() {
 
   return (
     <>
-      안녕
+      <Home/>
     </>
   )
 }

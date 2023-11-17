@@ -1,0 +1,9 @@
+.Home{
+  display: flex;
+  flex-direction: column; /*flex direction으로 세로 배치를 시켰다*/
+  align-items: center; /*세로를 조정하는 것은 align-item*/
+  background-color: silver;
+  width: 500px;
+  margin: 0 auto;
+  
+}

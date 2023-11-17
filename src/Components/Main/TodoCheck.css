@@ -1,0 +1,16 @@
+.TodoCheck{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.TodoCheck-All, .TodoCheck-Ok, .TodoCheck-Notyet{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TodoCheck-All p, .TodoCheck-Ok p, .TodoCheck-Notyet p{
+  font-weight: bold;
+}

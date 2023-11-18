@@ -1,7 +1,24 @@
 .TodoItem{
   display: flex;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid lightslategray;
+  background-color: white;
+  border-radius: 7px;
+
+}
+
+input[type="checkbox"]+label{
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  background: url('./assets/isDone_X.png') no-repeat 0 0px / contain;
+}
+
+input[type='checkbox']:checked+label {
+  background: url('./assets/isDone_O.png') no-repeat 0 0px / contain;
+}
+input[type="checkbox"] {
+  display: none;
 }
 
 .TodoItem-content{
@@ -10,10 +27,9 @@
   font-weight: bold;
 }
 
-.TodoItem-EdiBtn{
-  margin-right: 3px;
-}
+
 .TodoItem-EdiBtn, .TodoItem-DelBtn{
+  margin-right: 3px;
   height: 30px;
   border-radius: 7px;
   border: 1px solid lightgray;

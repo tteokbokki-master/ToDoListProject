@@ -5,9 +5,9 @@ export default function TodoList(){
 
   return(
     <div className="TodoList">
-      <TodoItem/>
-      <TodoItem/>
-      <TodoItem/>
+      <TodoItem id={1}/>
+      <TodoItem id={2}/>
+      <TodoItem id={3}/>
     </div>
   )
 }

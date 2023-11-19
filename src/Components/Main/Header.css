@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+
 .Header{
   display: flex;
   flex-direction : column;
@@ -6,11 +8,24 @@
 }
 
 .Header p:nth-child(1) {
+  font-family: 'Gasoek One', sans-serif;
   font-size: 45px;
-  font-weight: bolder;
+  letter-spacing: 10px;
   margin-bottom: 0;
+  color: #3F72AF;;
+  text-shadow: -2px -2px white,
+  2px 2px white,
+  2px -2px white,
+  -2px 2px white;
 }
 .Header p:nth-child(2){
   font-size: 20px;
+  font-weight: bolder;
+  color: #3F72AF;
   margin-top: 0;
+  text-shadow: 
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 }

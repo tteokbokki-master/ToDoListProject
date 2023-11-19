@@ -1,16 +1,17 @@
 .TodoItem{
   display: flex;
   align-items: center;
-  border-bottom: 1px solid lightslategray;
-  background-color: white;
+  border-right: 3px solid #3F72AF;;
+  border-bottom: 1.5px solid #3F72AF;
+  background-color: rgb(252, 252, 252);
   border-radius: 7px;
-
+  padding: 5px 0;
 }
 
 input[type="checkbox"]+label{
-  margin-left: 5px;
-  width: 40px;
-  height: 40px;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
   background: url('./assets/isDone_X.png') no-repeat 0 0px / contain;
 }
 
@@ -29,10 +30,16 @@ input[type="checkbox"] {
 
 
 .TodoItem-EdiBtn, .TodoItem-DelBtn{
-  margin-right: 3px;
+  margin-right: 5px;
   height: 30px;
   border-radius: 7px;
   border: 1px solid lightgray;
   font-weight: bold;
+  cursor: pointer;
 }
-
+.TodoItem-EdiBtn:hover, .TodoItem-DelBtn:hover{
+  color: white;
+  background-color: #3F72AF;
+  transition: background-color 0.5s ease;
+  border: 1px solid white;
+}

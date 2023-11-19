@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
 .Home{
   display: flex;
   flex-direction: column; /*flex direction으로 세로 배치를 시켰다*/
-  align-items: center; /*세로를 조정하는 것은 align-item*/
-  background-color: silver;
+  align-items: center; /*세로를 조정하는 것은 align-item */
+  background-color: #DBE2EF;
+  border-radius: 10px;
   width: 500px;
   margin: 0 auto;
-  
+  gap: 10px;
 }
+
+.Home :not(:first-child){
+  /* font-family: 'Do Hyeon', sans-serif; */
+  /* font-family: 'Orbit', sans-serif; */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/* 
+후보 1 #CBF1F5; */

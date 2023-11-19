@@ -9,8 +9,8 @@ export default function Home(){
   return(
     <div className="Home">
       <Header/>
-      <TodoCheck/>
       <TodoEditor/>
+      <TodoCheck/>
       <TodoList/>
     </div>
 

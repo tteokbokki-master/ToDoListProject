@@ -1,14 +1,15 @@
 import './TodoList.css'
 import TodoItem from './TodoItem'
 
-export default function TodoList(){
-
+export default function TodoList({todos}){
   return(
     <div className="TodoList">
       <div className="TodoList-TodoItem">
-      <TodoItem id={1}/>
-      <TodoItem id={2}/>
-      <TodoItem id={3}/>
+      {
+        todos.map((todo)=>
+          <TodoItem {...todo}/>
+        )
+      }
       </div>
     </div>
   )

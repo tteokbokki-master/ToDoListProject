@@ -10,6 +10,18 @@ export default function Home(){
   const [todos,setTodos]= useState([]);
   const currentId = useRef(0);
 
+  const isDone_O = todos.filter((todo)=>{
+    return todo.isDone != false
+  })
+  const isDone_X = todos.filter((todo)=>{
+    return todo.isDone != true
+  })
+  
+  const onClickCheckBox = (currentId) =>{
+    setTodos(todos.map((todo)=>todo.id === currentId ? {...todo, isDone: !todo.isDone} : todo))
+  }
+
+  console.log(todos)
   const onClickAddTodos = (content) =>{
     const data = {
       id : currentId.current++,
@@ -26,8 +38,8 @@ export default function Home(){
     <div className="Home">
       <Header/>
       <TodoEditor onClickAddTodos={onClickAddTodos}/>
-      <TodoCheck/>
-      <TodoList todos={todos}/>
+      <TodoCheck isDone_O={isDone_O} isDone_X={isDone_X}/>
+      <TodoList todos={todos} onClickCheckBox={onClickCheckBox} />
     </div>
 
   )

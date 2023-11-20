@@ -1,5 +1,5 @@
 import './TodoCheck.css'
-import soGood from './assets/soGoodO.png'
+import soGood from './assets/soGoodWink.png'
 import soSad from './assets/soSadX.png'
 
 export default function TodoCheck(){

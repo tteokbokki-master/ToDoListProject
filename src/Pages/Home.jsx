@@ -7,8 +7,8 @@ import { useState,useRef } from 'react'
 
 export default function Home(){
 
-  const [todos,setTodos]= useState([])
-  const currentId = useRef(0)
+  const [todos,setTodos]= useState([]);
+  const currentId = useRef(0);
 
   const onClickAddTodos = (content) =>{
     const data = {
@@ -18,6 +18,8 @@ export default function Home(){
     }
     setTodos([...todos,data])
   }
+
+  
 
 
   return(

@@ -7,7 +7,7 @@ export default function TodoList({todos}){
       <div className="TodoList-TodoItem">
       {
         todos.map((todo)=>
-          <TodoItem {...todo}/>
+          <TodoItem key={todo.id} {...todo}/>
         )
       }
       </div>

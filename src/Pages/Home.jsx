@@ -25,6 +25,9 @@ export default function Home(){
     setTodos(todos.filter((todo)=> todo.id != currentId))
   }
 
+  const onEditTodo = (currentId,currentContent) => {
+    setTodos(todos.map((todo)=> todo.id === currentId ? {...todo, content : currentContent} : todo))
+  }
   console.log(todos)
   const onClickAddTodos = (content) =>{
     const data = {
@@ -43,7 +46,7 @@ export default function Home(){
       <Header/>
       <TodoEditor onClickAddTodos={onClickAddTodos}/>
       <TodoCheck isDone_O={isDone_O} isDone_X={isDone_X}/>
-      <TodoList todos={todos} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo}/>
+      <TodoList todos={todos} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo} onEditTodo={onEditTodo}/>
     </div>
 
   )

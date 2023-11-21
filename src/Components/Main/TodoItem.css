@@ -8,6 +8,7 @@
   padding: 5px 0;
 }
 
+/*check box css*/
 input[type="checkbox"]+label{
   margin-left: 10px;
   width: 50px;
@@ -35,6 +36,13 @@ input[type="checkbox"] {
 }
 
 
+/* 수정 누르기 전 css*/
+.falseItem{
+  display: flex;
+  flex : 1;
+  align-items: center;
+}
+
 .TodoItem-EdiBtn, .TodoItem-DelBtn{
   margin-right: 5px;
   height: 30px;
@@ -42,10 +50,29 @@ input[type="checkbox"] {
   border: 1px solid lightgray;
   font-weight: bold;
   cursor: pointer;
+  
 }
 .TodoItem-EdiBtn:hover, .TodoItem-DelBtn:hover{
   color: white;
   background-color: #3F72AF;
   transition: background-color 0.5s ease;
   border: 1px solid white;
+}
+
+
+/*수정 버튼 누르면*/
+.trueItem{
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.TodoItem-input{
+  flex: 1;
+  padding: 16px;
+  margin-right: 3px;
+  border-radius: 7px;
+  border: 1px solid lightgray;
+  font-weight: bold;
+  font-size: 18px;
 }

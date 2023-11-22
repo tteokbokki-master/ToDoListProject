@@ -3,7 +3,7 @@ import Header from '../Components/Main/Header'
 import TodoEditor from '../Components/Main/TodoEditor'
 import TodoList from '../Components/Main/TodoList'
 import TodoCheck from '../Components/Main/TodoCheck'
-import { useState,useRef,useEffect } from 'react'
+import { useState,useEffect } from 'react'
 
 export default function Home(){
 
@@ -15,7 +15,6 @@ export default function Home(){
   
   useEffect(()=>{
     window.localStorage.setItem("todos",JSON.stringify(todos))
-    
   },[todos])
 
   const [idCount,setIdCount] = useState(0);
@@ -23,9 +22,10 @@ export default function Home(){
   useEffect(()=>{
     const data = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : 0
     const dataLength = Object.keys(data).length;
-    setIdCount(dataLength)
+    const countValue = data[dataLength-1] === undefined ? -1 : data[dataLength-1].id
+    setIdCount(countValue+1)
   },[todos])
-  
+
 
   const isDone_O = todos.filter((todo)=>{
     return todo.isDone != false

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useRef } from 'react'
 import './TodoItem.css'
 
 export default function TodoItem({id,isDone,content,onClickCheckBox,onClickDeleteTodo,onEditTodo}){
@@ -6,7 +6,8 @@ export default function TodoItem({id,isDone,content,onClickCheckBox,onClickDelet
   const TodoItem_content = isDone ? 'TodoItem_content_true' : 'TodoItem_content_false'
 
   const [onOff, setOnOFF] = useState(false)
-  const [newTodo, setNewTodo] = useState('')
+  const [newTodo, setNewTodo] = useState(content)
+  const inputRef = useRef();
 
   const onChangeCheckBox = () =>{
     if(onOff===false){
@@ -22,8 +23,12 @@ export default function TodoItem({id,isDone,content,onClickCheckBox,onClickDelet
   }
 
   const onClickEditBtn = () => {
+    if(newTodo===''){
+      inputRef.current.focus();
+      return;
+    }
     onEditTodo(id,newTodo)
-    setNewTodo('')
+    // setNewTodo('')
     onClickonOff()
   }
 
@@ -32,21 +37,20 @@ export default function TodoItem({id,isDone,content,onClickCheckBox,onClickDelet
   }
 
   const onKeyDownEnter = (e) =>{
-    if(e.keyCode === 13){
+    if(newTodo!='' && e.keyCode === 13){
       onClickEditBtn()
       onClickonOff()
     }
   }
-
-
+  
   return(
     <div className="TodoItem">
       <input onChange={onChangeCheckBox} id={`TodoItem-checkbox-${id}`} checked={isDone}type='checkbox'/>
       <label htmlFor={`TodoItem-checkbox-${id}`}/>
-      
+    
       { isDone===false && onOff ? 
           <div className='trueItem'>
-          <input value={newTodo} onKeyDown={onKeyDownEnter} className='TodoItem-input' onChange={onChangeEditTodo} placeholder={content}/>
+          <input ref={inputRef} value={newTodo} onKeyDown={onKeyDownEnter} className='TodoItem-input' onChange={onChangeEditTodo} placeholder={content}/>
           <button className='TodoItem-EdiBtn' onClick={onClickEditBtn}>수정완료</button>
           <button className='TodoItem-DelBtn' onClick={onClickonOff}>닫기</button> 
         </div> 

@@ -1,6 +1,12 @@
 .TodoList{
   width: 90%;
   margin-bottom: 15px;
+  height: 300px;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .TodoList-TodoItem{

@@ -1,8 +1,8 @@
 .TodoItem{
   display: flex;
   align-items: center;
-  border-right: 3px solid #3F72AF;;
-  border-bottom: 1.5px solid #3F72AF;
+  border-right: 4px solid #3F72AF;
+  border-bottom: 2px solid #3F72AF;
   background-color: rgb(252, 252, 252);
   border-radius: 7px;
   padding: 5px 0;

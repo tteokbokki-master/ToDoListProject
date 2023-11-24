@@ -74,3 +74,19 @@ ease는 CSS 트랜지션에서 사용되는 타이밍 함수 중 하나로, 변�
 [id 선택자를 조심하자](https://studysmart.tistory.com/92)
 <br/><br/> 블로그에 정리했다. <br/><br/>
 
+## CSS overflow 속성
+    overflow:  visible 
+기본 값이며, 넘칠 경우 컨텐츠가 상자 밖으로 보여짐<br/><br/>
+
+
+    overflow: hidden 
+넘치는 부분은 잘려서 보여지지 않음<br/><br/>
+
+
+    overflow: scroll 
+스크롤바가 추가되어 스크롤할 수 있음
+overflow-x ,overflow-y를 통해 가로만 또는 세로만 스크롤을 만들 수도 있다.<br/><br/>
+
+
+    overflow: auto
+컨텐츠 량에 따라 스크롤바를 추가할지 자동으로 결정<br/><br/>

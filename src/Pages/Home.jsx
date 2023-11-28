@@ -3,13 +3,16 @@ import Header from '../Components/Main/Header'
 import TodoEditor from '../Components/Main/TodoEditor'
 import TodoList from '../Components/Main/TodoList'
 import TodoCheck from '../Components/Main/TodoCheck'
-import { useState,useEffect } from 'react'
+import { useState,useEffect,useRef} from 'react'
 
 export default function Home(){
 
+  const dragItem = useRef();
+  const dragEnterItem = useRef();
+
   const localTodos = window.localStorage.getItem("todos")
   ? JSON.parse(window.localStorage.getItem("todos"))
-  : [];
+  : []; //
   
   const [todos,setTodos]= useState(localTodos);
   
@@ -56,6 +59,25 @@ export default function Home(){
     setTodos([...todos,data])
   }
 
+  const onDragStart = (idx) => {
+    dragItem.current = idx;
+    console.log(dragItem)
+  }
+
+  const onDragEnter = (idx) => {
+    dragEnterItem.current = idx;
+    console.log(dragEnterItem)
+  }
+  
+  const onDragEnd = () => {
+    const newTodos = [...todos]
+    const dragCurrentItem = newTodos[dragItem.current];
+    newTodos.splice(dragItem.current,1);
+    newTodos.splice(dragEnterItem.current,0,dragCurrentItem);
+    dragItem.current = null;
+    dragEnterItem.current = null;
+    setTodos(newTodos)
+  }
 
   
   return(
@@ -63,7 +85,7 @@ export default function Home(){
       <Header/>
       <TodoEditor onClickAddTodos={onClickAddTodos}/>
       <TodoCheck isDone_O={isDone_O} isDone_X={isDone_X}/>
-      <TodoList todos={todos} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo} onEditTodo={onEditTodo}/>
+      <TodoList todos={todos} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo} onEditTodo={onEditTodo} onDragStart={onDragStart} onDragEnter={onDragEnter} onDragEnd ={onDragEnd}/>
     </div>
 
   )

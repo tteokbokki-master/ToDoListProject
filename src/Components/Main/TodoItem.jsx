@@ -1,8 +1,7 @@
 import { useState,useRef } from 'react'
 import './TodoItem.css'
 
-export default function TodoItem({id,isDone,content,onClickCheckBox,onClickDeleteTodo,onEditTodo}){
-
+export default function TodoItem({id,idx,isDone,content,onClickCheckBox,onClickDeleteTodo,onEditTodo,onDragStart,onDragEnter,onDragEnd}){
   const TodoItem_content = isDone ? 'TodoItem_content_true' : 'TodoItem_content_false'
 
   const [onOff, setOnOFF] = useState(false)
@@ -42,9 +41,8 @@ export default function TodoItem({id,isDone,content,onClickCheckBox,onClickDelet
       onClickonOff()
     }
   }
-  
   return(
-    <div className="TodoItem">
+    <div className="TodoItem" draggable onDragStart={()=>{onDragStart(idx)}} onDragEnter={()=>{onDragEnter(idx)}} onDragEnd={()=>{onDragEnd()}}>
       <input onChange={onChangeCheckBox} id={`TodoItem-checkbox-${id}`} checked={isDone}type='checkbox'/>
       <label htmlFor={`TodoItem-checkbox-${id}`}/>
     

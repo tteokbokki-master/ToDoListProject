@@ -1,14 +1,16 @@
 .TodoItem{
   display: flex;
   align-items: center;
+  border-top: 0.5px solid #3F72AF;
+  border-left: 0.5px solid #3F72AF;
   border-right: 4px solid #3F72AF;
-  border-bottom: 2px solid #3F72AF;
+  border-bottom: 1.5px solid #3F72AF;
   background-color: rgb(252, 252, 252);
   border-radius: 7px;
   padding: 5px 0;
 }
 
-/*check box css*/
+/*check box css임*/
 input[type="checkbox"]+label{
   margin-left: 10px;
   width: 50px;
@@ -36,7 +38,7 @@ input[type="checkbox"] {
 }
 
 
-/* 수정 누르기 전 css*/
+/* 수정 누르기 전 css임*/
 .falseItem{
   display: flex;
   flex : 1;
@@ -60,7 +62,7 @@ input[type="checkbox"] {
 }
 
 
-/*수정 버튼 누르면*/
+/*수정 버튼 누르면 나옴*/
 .trueItem{
   display: flex;
   flex: 1;

@@ -4,6 +4,7 @@
 
 .Home{
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center; 
   background-color: #DBE2EF;

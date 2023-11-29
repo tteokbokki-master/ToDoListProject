@@ -3,6 +3,7 @@ import Header from '../Components/Main/Header'
 import TodoEditor from '../Components/Main/TodoEditor'
 import TodoList from '../Components/Main/TodoList'
 import TodoCheck from '../Components/Main/TodoCheck'
+import Modal from '../Components/Main/Modal'
 import { useState,useEffect,useRef} from 'react'
 
 export default function Home(){
@@ -83,9 +84,11 @@ export default function Home(){
   return(
     <div className="Home">
       <Header/>
+      <Modal/>
       <TodoEditor onClickAddTodos={onClickAddTodos}/>
       <TodoCheck isDone_O={isDone_O} isDone_X={isDone_X}/>
       <TodoList todos={todos} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo} onEditTodo={onEditTodo} onDragStart={onDragStart} onDragEnter={onDragEnter} onDragEnd ={onDragEnd}/>
+
     </div>
 
   )

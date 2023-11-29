@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+
+.Modal{
+  display: flex;
+  flex-direction: column;
+  background-color: #DBE2EF;
+  border: 1px solid #3F72AF;
+  border-right: 4px solid #3F72AF;
+  border-bottom: 2px solid #3F72AF;
+  border-radius: 7px;
+  width: 70%;
+}
+
+.Modal-Close{
+  display: flex;
+  justify-content: end;
+}
+
+.Modal-Close button{
+  padding-top: 5px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Modal-Image{
+  display: flex;
+  justify-content: center;
+}
+.Modal-Image img{
+  width: 90%;
+  padding-left: 20px;
+}
+
+.Modal-Content-1{
+  display: flex;
+  justify-content: center;
+}
+
+.Modal-Content-1 p{
+  font-family: 'Gasoek One', sans-serif;
+  font-size: 35px;
+  margin-bottom: 0;
+  color: #3F72AF;;
+  margin-top: 0;
+  text-shadow: -2px -2px #F9F7F7,
+  2px 2px #F9F7F7,
+  2px -2px #F9F7F7,
+  -2px 2px #F9F7F7;
+}
+
+
+.Modal-Content-2{
+  display: flex;
+  justify-content: center;
+}
+
+.Modal-Content-2 p{
+  font-family: 'Gasoek One', sans-serif;
+  font-size: 35px;
+  margin-bottom: 0;
+  color: #3F72AF;;
+  margin-top: 0;
+  text-shadow: -2px -2px #F9F7F7,
+  2px 2px #F9F7F7,
+  2px -2px #F9F7F7,
+  -2px 2px #F9F7F7;
+}

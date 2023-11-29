@@ -92,8 +92,11 @@ export default function Home(){
       <TodoCheck isDone_O={isDone_O} isDone_X={isDone_X}/>
       <TodoList todos={todos} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo} onEditTodo={onEditTodo} onDragStart={onDragStart} onDragEnter={onDragEnter} onDragEnd ={onDragEnd}/>
       <div className='Home-Footer'>
-        {isDone_O.length >=1 && isDone_X.length === 0 ? <button className='Home-Footer-End' onClick={modalHandlder}>끝!</button> : <div></div>}
-        {modalCount ? <div></div> : <button className='Home-Footer-trash'>휴지통</button>}
+        {isDone_O.length >=1 && isDone_X.length === 0 ? 
+        !modalCount ?
+        <button className='Home-Footer-End' onClick={modalHandlder}>끝!</button> 
+        : <div></div>
+        : <div></div>}
       </div>
     </div>
   )

@@ -10,15 +10,24 @@
   background-color: #DBE2EF;
   border-radius: 10px;
   width: 500px;
+  height: 800px;
   margin: 0 auto;
   gap: 10px;
   border: 1px solid #3F72AF;
 }
 
 .Home :not(:first-child){
-  /* font-family: 'Do Hyeon', sans-serif; */
-  /* font-family: 'Orbit', sans-serif; */
   font-family: 'Noto Sans KR', sans-serif;
 }
 /* 
 후보 1 #CBF1F5; */
+
+
+.Home-Footer{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}

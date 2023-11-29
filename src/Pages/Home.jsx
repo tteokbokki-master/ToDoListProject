@@ -37,7 +37,7 @@ export default function Home(){
   const isDone_X = todos.filter((todo)=>{
     return todo.isDone != true
   })
-  
+
   const onClickCheckBox = (currentId) =>{
     setTodos(todos.map((todo)=>todo.id === currentId ? {...todo, isDone: !todo.isDone} : todo))
   }
@@ -62,12 +62,10 @@ export default function Home(){
 
   const onDragStart = (idx) => {
     dragItem.current = idx;
-    console.log(dragItem)
   }
 
   const onDragEnter = (idx) => {
     dragEnterItem.current = idx;
-    console.log(dragEnterItem)
   }
   
   const onDragEnd = () => {
@@ -80,16 +78,23 @@ export default function Home(){
     setTodos(newTodos)
   }
 
+  const [modalCount, setModalCount] = useState(false)
+
+  const modalHandlder = () =>{
+    setModalCount(!modalCount)
+  }
   
   return(
     <div className="Home">
       <Header/>
-      <Modal/>
+      { modalCount ? <Modal modalHandlder={modalHandlder}/> : ''}
       <TodoEditor onClickAddTodos={onClickAddTodos}/>
       <TodoCheck isDone_O={isDone_O} isDone_X={isDone_X}/>
       <TodoList todos={todos} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo} onEditTodo={onEditTodo} onDragStart={onDragStart} onDragEnter={onDragEnter} onDragEnd ={onDragEnd}/>
-
+      <div className='Home-Footer'>
+        {isDone_O.length >=1 && isDone_X.length === 0 ? <button className='Home-Footer-End' onClick={modalHandlder}>끝!</button> : <div></div>}
+        {modalCount ? <div></div> : <button className='Home-Footer-trash'>휴지통</button>}
+      </div>
     </div>
-
   )
 }

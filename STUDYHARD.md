@@ -93,3 +93,6 @@ overflow-x ,overflow-y를 통해 가로만 또는 세로만 스크롤을 만들 
 
 ## 드래그 앤 드롭 사용법
 [리액트 드래그 앤 드롭(DND)](https://studysmart.tistory.com/97)
+
+## 간단한 모달창 구현
+[리액트 간단한 모달창 만들기](https://studysmart.tistory.com/99)

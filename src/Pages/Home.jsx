@@ -24,9 +24,10 @@ export default function Home(){
   const [idCount,setIdCount] = useState(0);
 
   useEffect(()=>{
-    const data = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : 0
-    const dataLength = Object.keys(data).length;
-    const countValue = data[dataLength-1] === undefined ? -1 : data[dataLength-1].id
+    const countingStar = todos.map((todo)=>{
+      return todo.id
+    })
+    const countValue = Math.max(...countingStar) === -Infinity ? -1 : Math.max(...countingStar);
     setIdCount(countValue+1)
   },[todos])
 

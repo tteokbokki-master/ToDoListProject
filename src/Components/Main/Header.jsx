@@ -1,5 +1,7 @@
 import './Header.css'
-export default function Header(){
+import React from 'react'
+
+function Header(){
 
   const today = new Date()
   const year = today.getFullYear()
@@ -13,6 +15,4 @@ export default function Header(){
     </div>
   )
 }
-
-// 날짜와 시간이 나와야함.
-// 애니메이션을 배워서, 투두리스트 글씨가 서서히 연파란색으로 변하도록(?)
+export default React.memo(Header);

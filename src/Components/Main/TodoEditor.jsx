@@ -1,7 +1,12 @@
-import { useState,useRef} from 'react'
-import './TodoEditor.css'
-export default function TodoEditor({onClickAddTodos}){
+import { useState,useRef, useContext} from 'react'
+import { TodoContext } from './TodoContext';
+import React from 'react';
 
+import './TodoEditor.css'
+function TodoEditor(){
+
+  const {onClickAddTodos} = useContext(TodoContext);
+  
   const [value, setValue] = useState('')
   const inputRef = useRef();
 
@@ -34,3 +39,5 @@ export default function TodoEditor({onClickAddTodos}){
     </div>
   )
 }
+
+export default React.memo(TodoEditor)

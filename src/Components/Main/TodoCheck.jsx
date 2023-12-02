@@ -1,8 +1,13 @@
 import './TodoCheck.css'
 import soGood from './assets/soGoodWink.png'
 import soSad from './assets/soSadX.png'
+import { useContext } from 'react'
+import { TodoContext } from './TodoContext'
 
-export default function TodoCheck({isDone_O, isDone_X}){
+export default function TodoCheck(){
+  
+  const {isDone_O,isDone_X} = useContext(TodoContext);
+
   return(
     <div className='TodoCheck'>
         <div className='TodoCheck-img'>

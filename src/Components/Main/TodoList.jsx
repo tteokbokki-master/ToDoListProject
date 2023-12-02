@@ -1,17 +1,21 @@
 import './TodoList.css'
+import React from 'react'
 import TodoItem from './TodoItem'
+import { useContext } from 'react'
+import { TodoContext } from './TodoContext'
 
-export default function TodoList({todos,onClickCheckBox,onClickDeleteTodo,onEditTodo,onDragStart,onDragEnter,onDragEnd}){
+function TodoList(){
+  const {todos} = useContext(TodoContext);
   return(
-    
     <div className="TodoList">
       <div className="TodoList-TodoItem">
       {
         todos.map((todo,idx)=> 
-          <TodoItem key={todo.id} idx={idx} {...todo} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo} onEditTodo={onEditTodo} onDragStart={onDragStart} onDragEnter={onDragEnter} onDragEnd={onDragEnd}/>
+          <TodoItem key={todo.id} idx={idx} {...todo}/>
         )
       }
       </div>
     </div>
   )
 }
+export default React.memo(TodoList)

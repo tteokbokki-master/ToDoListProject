@@ -1,7 +1,12 @@
 import { useState,useRef } from 'react'
 import './TodoItem.css'
+import { useContext } from 'react';
+import { TodoContext } from './TodoContext';
 
-export default function TodoItem({id,idx,isDone,content,onClickCheckBox,onClickDeleteTodo,onEditTodo,onDragStart,onDragEnter,onDragEnd}){
+export default function TodoItem({id,idx,isDone,content}){
+  
+  const {onClickCheckBox,onClickDeleteTodo,onEditTodo,onDragStart,onDragEnter,onDragEnd} = useContext(TodoContext);
+
   const TodoItem_content = isDone ? 'TodoItem_content_true' : 'TodoItem_content_false'
 
   const [onOff, setOnOFF] = useState(false)

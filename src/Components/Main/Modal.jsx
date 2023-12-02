@@ -1,7 +1,12 @@
 import Lion from './assets/Lion.png'
 import './Modal.css'
 
-export default function Modal({modalHandlder}) {
+import { TodoContext } from './TodoContext'
+import { useContext } from 'react'
+
+export default function Modal() {
+
+  const {modalHandlder} = useContext(TodoContext);
 
   return (
     <div className='Modal-Container'>

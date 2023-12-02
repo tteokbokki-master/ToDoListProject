@@ -4,7 +4,8 @@ import TodoEditor from '../Components/Main/TodoEditor'
 import TodoList from '../Components/Main/TodoList'
 import TodoCheck from '../Components/Main/TodoCheck'
 import Modal from '../Components/Main/Modal'
-import { useState,useEffect,useRef} from 'react'
+import { useState,useEffect,useRef, useMemo} from 'react'
+import { TodoContext } from '../Components/Main/TodoContext'
 
 export default function Home(){
 
@@ -31,18 +32,23 @@ export default function Home(){
     setIdCount(countValue+1)
   },[todos])
 
-
-  const isDone_O = todos.filter((todo)=>{
-    return todo.isDone != false
-  })
-  const isDone_X = todos.filter((todo)=>{
-    return todo.isDone != true
-  })
+  const {isDone_O, isDone_X} = useMemo(()=>{
+    const isDone_O = todos.filter((todo)=>{
+      return todo.isDone != false
+    })
+    const isDone_X = todos.filter((todo)=>{
+      return todo.isDone != true
+    })
+    return {
+      isDone_O,
+      isDone_X,
+    }
+  },[todos])
+  
 
   const onClickCheckBox = (currentId) =>{
     setTodos(todos.map((todo)=>todo.id === currentId ? {...todo, isDone: !todo.isDone} : todo))
   }
-
 
   const onClickDeleteTodo = (currentId) => {
     setTodos(todos.filter((todo)=> todo.id != currentId))
@@ -64,7 +70,6 @@ export default function Home(){
   const onDragStart = (idx) => {
     dragItem.current = idx;
   }
-
   const onDragEnter = (idx) => {
     dragEnterItem.current = idx;
   }
@@ -88,10 +93,16 @@ export default function Home(){
   return(
     <div className="Home">
       <Header/>
-      { modalCount ? <Modal modalHandlder={modalHandlder}/> : ''}
-      <TodoEditor onClickAddTodos={onClickAddTodos}/>
-      <TodoCheck isDone_O={isDone_O} isDone_X={isDone_X}/>
-      <TodoList todos={todos} onClickCheckBox={onClickCheckBox} onClickDeleteTodo={onClickDeleteTodo} onEditTodo={onEditTodo} onDragStart={onDragStart} onDragEnter={onDragEnter} onDragEnd ={onDragEnd}/>
+      <TodoContext.Provider value={{
+        modalHandlder,onClickAddTodos,isDone_O,isDone_X,todos,onClickCheckBox,
+        onClickDeleteTodo,onEditTodo,onDragStart,onDragEnter,onDragEnd
+      }}>
+        { modalCount ? <Modal/> : ''}
+        <TodoEditor/>
+        <TodoCheck/>
+        <TodoList/>
+      </TodoContext.Provider>
+
       <div className='Home-Footer'>
         {isDone_O.length >=1 && isDone_X.length === 0 ? 
         !modalCount ?

@@ -1,0 +1,17 @@
+.Footer-container{
+  width: 100%;
+}
+.Footer{
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.Home-Footer{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}

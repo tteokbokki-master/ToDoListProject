@@ -3,6 +3,7 @@ import Header from '../Components/Main/Header'
 import TodoEditor from '../Components/Main/TodoEditor'
 import TodoList from '../Components/Main/TodoList'
 import TodoCheck from '../Components/Main/TodoCheck'
+import Footer from '../Components/Main/Footer'
 import Modal from '../Components/Main/Modal'
 import { useState,useEffect,useRef, useMemo} from 'react'
 import { TodoContext } from '../Components/Main/TodoContext'
@@ -95,21 +96,22 @@ export default function Home(){
       <Header/>
       <TodoContext.Provider value={{
         modalHandlder,onClickAddTodos,isDone_O,isDone_X,todos,onClickCheckBox,
-        onClickDeleteTodo,onEditTodo,onDragStart,onDragEnter,onDragEnd
+        onClickDeleteTodo,onEditTodo,onDragStart,onDragEnter,onDragEnd,modalCount
       }}>
         { modalCount ? <Modal/> : ''}
         <TodoEditor/>
         <TodoCheck/>
         <TodoList/>
+        <Footer/>
       </TodoContext.Provider>
 
-      <div className='Home-Footer'>
+      {/* <div className='Home-Footer'>
         {isDone_O.length >=1 && isDone_X.length === 0 ? 
         !modalCount ?
         <button className='Home-Footer-End' onClick={modalHandlder}>끝!</button> 
         : <div></div>
         : <div></div>}
-      </div>
+      </div> */}
     </div>
   )
 }

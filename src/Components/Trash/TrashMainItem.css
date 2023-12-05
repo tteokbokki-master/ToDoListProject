@@ -1,0 +1,41 @@
+.TrashMainItem{
+  width: 90%;
+  border-radius: 7px;
+  padding: 5px 0;
+  display: flex;
+
+  border-left: 0.5px solid #3F72AF;
+  border-top: 0.5px solid #3F72AF;
+  border-right: 4px solid #3F72AF;
+  border-bottom: 1.5px solid #3F72AF;
+  background-color: rgb(252, 252, 252);
+
+}
+
+.TrashMainItem-Content{
+  flex: 1;
+  text-align: center;
+}
+
+.TrashMainItem-Btn{
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+  gap: 3px;
+}
+
+.TrashMainItem-Btn1, .TrashMainItem-Btn2{
+  margin-right: 5px;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid lightgray;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+.TrashMainItem-Btn1:hover, .TrashMainItem-Btn2:hover{
+  color: white;
+  background-color: #3F72AF;
+  transition: background-color 0.5s ease;
+  border: 1px solid white;
+}

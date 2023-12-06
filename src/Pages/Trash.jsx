@@ -38,7 +38,7 @@ export default function Trash(){
   return(
   <div className='Trash'>
     <Header/>
-    {clear ? <ClearModal/> : ''}
+    {clear ? <ClearModal nuClear={nuClear} realClear={realClear} /> : ''}
     <TrashMain trash={trash} deleteTrash={deleteTrash}/>
     <Footer nuClear={nuClear} realClear={realClear}/>
   </div>

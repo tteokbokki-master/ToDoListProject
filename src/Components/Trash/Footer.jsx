@@ -16,7 +16,7 @@ export default function Footer({realClear}){
   return(
     <div className='Footer'>
       <div className='Footer-Btn'>
-        <button onClick={realClear}>초기화</button>
+        <button onClick={realClear}>비우기</button>
         <button onClick={goToHome}>홈으로</button>
       </div>
     </div>

@@ -1,13 +1,22 @@
 import './ClearModal.css'
 
-export default function ClearModal (){
+export default function ClearModal ({realClear,nuClear}){
+
+  const onClicknuClear = () => {
+    nuClear()
+    realClear()
+  }
+
+  const onClickClear = () => {
+    realClear()
+  }
   return(
     <div className='ClearModal-Container'>
       <div className="ClearModal">
-        <p>ㄹㅇ 초기화 하시겠습니까?</p>
+        <p>정말 휴지통을 비우시겠습니까?</p>
         <div className='ClearModal-Btn'>
-          <button>예</button>
-          <button>아니요</button>
+          <button onClick={onClicknuClear}>예</button>
+          <button onClick={onClickClear}>아니요</button>
         </div>
       </div>
     </div>

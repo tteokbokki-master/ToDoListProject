@@ -4,7 +4,7 @@ export default function Header(){
 
   return(
     <div className='Header'>
-      <p>쓰레기통</p>
+      <p>휴지통</p>
     </div>
   )
 }

@@ -1,13 +1,10 @@
-import { useState } from 'react';
+
 import './Footer.css'
 import { useNavigate } from 'react-router'
+import ClearModal from './ClearModal';
 
-export default function Footer(){
-  const [clear, setClear] = useState(false);
+export default function Footer({realClear}){
 
-  const realClear = () =>{
-    setClear(!clear)
-  }
 
   const nav = useNavigate();
   const goToHome = () =>{
@@ -19,7 +16,6 @@ export default function Footer(){
   return(
     <div className='Footer'>
       <div className='Footer-Btn'>
-        // clear ? 모달 : ''
         <button onClick={realClear}>초기화</button>
         <button onClick={goToHome}>홈으로</button>
       </div>

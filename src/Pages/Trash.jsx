@@ -3,6 +3,7 @@ import Header from '../Components/Trash/Header'
 import TrashMain from '../Components/Trash/TrashMain'
 import Footer from '../Components/Trash/Footer'
 import { useState,useEffect} from 'react'
+import ClearModal from '../Components/Trash/ClearModal'
 export default function Trash(){
 
   const localTrash= window.localStorage.getItem("trash")
@@ -20,8 +21,12 @@ export default function Trash(){
   const nuClear = () => {
     setTrash([]);
   }
+  const [clear, setClear] = useState(false);
 
-  
+  const realClear = () =>{
+    setClear(!clear)
+  }
+
 
 
 
@@ -33,8 +38,9 @@ export default function Trash(){
   return(
   <div className='Trash'>
     <Header/>
+    {clear ? <ClearModal/> : ''}
     <TrashMain trash={trash} deleteTrash={deleteTrash}/>
-    <Footer nuClear={nuClear}/>
+    <Footer nuClear={nuClear} realClear={realClear}/>
   </div>
   )
 }

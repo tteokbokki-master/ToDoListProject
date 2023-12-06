@@ -11,6 +11,7 @@
 - <s>[완료 알림 모달창 구현](https://studysmart.tistory.com/100)</s> 23.11.30
 - 휴지통 구현
   - <s>[휴지통 디자인 및 기초작업](https://studysmart.tistory.com/107)</s> 23.12.05
+  - <s>[휴지통으로 데이터 옮기기](https://studysmart.tistory.com/109)</s> 23.12.06
 
 
 

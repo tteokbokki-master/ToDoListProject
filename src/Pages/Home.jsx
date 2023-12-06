@@ -15,13 +15,21 @@ export default function Home(){
 
   const localTodos = window.localStorage.getItem("todos")
   ? JSON.parse(window.localStorage.getItem("todos"))
-  : []; //
-  
+  : []; 
+
+  const localTrash = window.localStorage.getItem("trash")
+  ? JSON.parse(window.localStorage.getItem("trash"))
+  : [];
+
   const [todos,setTodos]= useState(localTodos);
+  const [trash, setTrash] = useState(localTrash);
+  
+``
   
   useEffect(()=>{
     window.localStorage.setItem("todos",JSON.stringify(todos))
-  },[todos])
+    window.localStorage.setItem("trash",JSON.stringify(trash))
+  },[todos][trash])
 
   const [idCount,setIdCount] = useState(0);
 
@@ -29,9 +37,20 @@ export default function Home(){
     const countingStar = todos.map((todo)=>{
       return todo.id
     })
-    const countValue = Math.max(...countingStar) === -Infinity ? -1 : Math.max(...countingStar);
+    const countingTrash = trash.map((tra)=>{
+      return tra.id
+    })
+    const allInOneID = countingStar.concat(countingTrash);
+
+    const countValue = Math.max(...allInOneID) === -Infinity ? -1 
+    : Math.max(...allInOneID);
     setIdCount(countValue+1)
-  },[todos])
+  },[todos][trash])
+
+  
+
+
+
 
   const {isDone_O, isDone_X} = useMemo(()=>{
     const isDone_O = todos.filter((todo)=>{
@@ -53,6 +72,8 @@ export default function Home(){
 
   const onClickDeleteTodo = (currentId) => {
     setTodos(todos.filter((todo)=> todo.id != currentId))
+    const newTrash = todos.filter((todo)=> todo.id === currentId)
+    setTrash([...trash,newTrash[0]])
   }
 
   const onEditTodo = (currentId,currentContent) => {

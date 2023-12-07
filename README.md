@@ -9,9 +9,10 @@
 - <s>[로컬스토리지 저장](https://studysmart.tistory.com/93)</s> 23.11.21
 - <s>[드래그 앤 드롭 구현](https://studysmart.tistory.com/98)</s> 23.11.28
 - <s>[완료 알림 모달창 구현](https://studysmart.tistory.com/100)</s> 23.11.30
-- 휴지통 구현
+- <s>휴지통 구현</s>
   - <s>[휴지통 디자인 및 기초작업](https://studysmart.tistory.com/107)</s> 23.12.05
   - <s>[휴지통으로 데이터 옮기기](https://studysmart.tistory.com/109)</s> 23.12.06
+  - <s>[지우기,초기화,복구 구현](https://studysmart.tistory.com/110)</s> 23.12.07
 
 
 

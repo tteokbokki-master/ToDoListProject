@@ -125,14 +125,6 @@ export default function Home(){
         <TodoList/>
         <Footer/>
       </TodoContext.Provider>
-
-      {/* <div className='Home-Footer'>
-        {isDone_O.length >=1 && isDone_X.length === 0 ? 
-        !modalCount ?
-        <button className='Home-Footer-End' onClick={modalHandlder}>끝!</button> 
-        : <div></div>
-        : <div></div>}
-      </div> */}
     </div>
   )
 }

@@ -1,10 +1,7 @@
-
 import './Footer.css'
 import { useNavigate } from 'react-router'
-import ClearModal from './ClearModal';
 
 export default function Footer({realClear}){
-
 
   const nav = useNavigate();
   const goToHome = () =>{

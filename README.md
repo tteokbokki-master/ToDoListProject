@@ -3,6 +3,17 @@
 투두리스트 만들기 프로젝트입니다.<br> 다양한 기능을 조금씩 추가해보는 것이 목표입니다🫡 
 </div>
 
+## ★☆완성☆★
+
+<img width="300" alt="완성" src="https://github.com/tteokbokki-master/ToDoListProject/assets/129606040/cb6a64dc-31e7-46aa-8324-7a2b026a3805">
+<h3>
+
+[[회고록]](https://studysmart.tistory.com/114)
+
+</h3>
+<h3>개발 기간 : 23.11.17 ~ 23.12.09</h3> <br>
+
+
 
 ## 만들어 볼 기능 (점점 추가)
 - <s>기본적인 TodoList (추가 및 삭제 기능)</s> 23.11.21 

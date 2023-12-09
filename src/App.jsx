@@ -5,10 +5,12 @@ import { Route,Routes } from "react-router"
 function App() {
 
   return (
-    <Routes>
-      <Route path="/" element={<Home/>}> </Route>
-      <Route path="/trash" element={<Trash/>}></Route>
-    </Routes>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home/>}> </Route>
+        <Route path="/trash" element={<Trash/>}></Route>
+      </Routes>
+    </div>
   )
 }
 

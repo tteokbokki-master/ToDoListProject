@@ -32,7 +32,6 @@ export default function TodoItem({id,idx,isDone,content}){
       return;
     }
     onEditTodo(id,newTodo)
-    // setNewTodo('')
     onClickonOff()
   }
 
@@ -52,7 +51,7 @@ export default function TodoItem({id,idx,isDone,content}){
       <label htmlFor={`TodoItem-checkbox-${id}`}/>
     
       { isDone===false && onOff ? 
-          <div className='trueItem'>
+        <div className='trueItem'>
           <input ref={inputRef} value={newTodo} onKeyDown={onKeyDownEnter} className='TodoItem-input' onChange={onChangeEditTodo} placeholder={content}/>
           <button className='TodoItem-EdiBtn' onClick={onClickEditBtn}>수정완료</button>
           <button className='TodoItem-DelBtn' onClick={onClickonOff}>닫기</button> 

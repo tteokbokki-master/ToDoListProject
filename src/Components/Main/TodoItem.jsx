@@ -48,20 +48,25 @@ export default function TodoItem({id,idx,isDone,content}){
   return(
     <div className="TodoItem" draggable onDragStart={()=>{onDragStart(idx)}} onDragEnter={()=>{onDragEnter(idx)}} onDragEnd={()=>{onDragEnd()}}>
       <input onChange={onChangeCheckBox} id={`TodoItem-checkbox-${id}`} checked={isDone}type='checkbox'/>
-      <label htmlFor={`TodoItem-checkbox-${id}`}/>
+      
     
       { isDone===false && onOff ? 
         <div className='trueItem'>
           <input ref={inputRef} value={newTodo} onKeyDown={onKeyDownEnter} className='TodoItem-input' onChange={onChangeEditTodo} placeholder={content}/>
-          <button className='TodoItem-EdiBtn' onClick={onClickEditBtn}>수정완료</button>
+          <div className='btn'>
+          <button className='TodoItem-EdiBtn' onClick={onClickEditBtn}>완료</button>
           <button className='TodoItem-DelBtn' onClick={onClickonOff}>닫기</button> 
+          </div>
         </div> 
       :
-        <div className='falseItem'>
+      <>
+      <label htmlFor={`TodoItem-checkbox-${id}`}/>
+      <div className='falseItem'>
           <p className={TodoItem_content}>{content}</p> 
-          <button className='TodoItem-EdiBtn' onClick={onClickonOff}>수정</button>
-          <button className='TodoItem-DelBtn' onClick={onClickDelete}>삭제</button> 
+          <button className='TodoItem-EdiBtn-1' onClick={onClickonOff}>수정</button>
+          <button className='TodoItem-DelBtn-1' onClick={onClickDelete}>삭제</button> 
       </div>
+      </>
       }
     </div>
   )

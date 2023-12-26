@@ -8,8 +8,8 @@
 <img width="300" alt="완성" src="https://github.com/tteokbokki-master/ToDoListProject/assets/129606040/cb6a64dc-31e7-46aa-8324-7a2b026a3805">
 <h3>
 
-[[회고록]](https://studysmart.tistory.com/114)
-[[배포링크]](best-todolist-ever.netlify.app)
+[[회고록]](https://studysmart.tistory.com/114)<br>
+[[배포링크]](https://best-todolist-ever.netlify.app)
 
 </h3>
 <h3>개발 기간 : 23.11.17 ~ 23.12.09</h3> <br>

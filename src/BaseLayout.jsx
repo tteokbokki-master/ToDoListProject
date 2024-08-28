@@ -1,12 +1,12 @@
-import './BaseLayout.css'
+import './BaseLayout.css';
+import { Outlet } from 'react-router-dom';
 
-export default function BaseLayout({children}){
-
-  return(
-    <div className='Container'>
-    <div className="BaseLayout">
-      {children}
+export default function BaseLayout() {
+  return (
+    <div className="Container">
+      <div className="BaseLayout">
+        <Outlet />
+      </div>
     </div>
-    </div>
-  )
+  );
 }

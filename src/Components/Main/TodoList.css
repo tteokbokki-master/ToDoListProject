@@ -1,6 +1,6 @@
-.TodoList{
+.TodoList {
   width: 90%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   height: 300px;
   overflow: scroll;
 }
@@ -9,7 +9,7 @@
   display: none;
 }
 
-.TodoList-TodoItem{
+.TodoList-TodoItem {
   margin-top: 10px;
   display: flex;
   flex-direction: column;

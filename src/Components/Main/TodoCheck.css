@@ -1,27 +1,35 @@
-.TodoCheck{
+.TodoCheck {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.TodoCheck-img{
+.TodoCheck-img {
   display: flex;
   justify-content: center;
   gap: 50px;
 }
 
-.TodoCheck-img :nth-child(1){
+.TodoCheck-img :nth-child(1) {
   width: 150px;
 }
 
-.TodoCheck-img :nth-child(2){
+.TodoCheck-img :nth-child(2) {
   width: 120px;
 }
 
-
-
-.TodoCheck-p{
+.TodoCheck-p {
   display: flex;
   justify-content: center;
   gap: 120px;
+}
+
+@media (max-width: 375px) {
+  .TodoCheck-img :nth-child(1) {
+    width: 135px;
+  }
+
+  .TodoCheck-img :nth-child(2) {
+    width: 105px;
+  }
 }

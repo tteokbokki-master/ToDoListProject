@@ -1,17 +1,15 @@
-
-.Container{
+.Container {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
-  min-height: 852px;
-  overflow: hidden;   
 }
-.BaseLayout{
-  width: 575px;
-  height: 1024px;
-  background-color: #DBE2EF;
+.BaseLayout {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  background-color: #dbe2ef;
   display: flex;
   flex-direction: column;
   align-items: center;
-};
+}

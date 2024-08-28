@@ -2,19 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 
-.Home{
+.Home {
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
-  background-color: #DBE2EF;
+  background-color: #dbe2ef;
   border-radius: 10px;
-  width: 393px;
-  height: 852px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   gap: 15px;
 }
 
-.Home :not(:first-child){
+.Home :not(:first-child) {
   font-family: 'Noto Sans KR', sans-serif;
 }

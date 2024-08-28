@@ -1,13 +1,13 @@
-.Footer-container{
+.Footer-container {
   width: 100%;
 }
-.Footer{
+.Footer {
   display: flex;
   justify-content: end;
   margin-right: 10px;
 }
 
-.Home-Footer{
+.Home-Footer {
   position: absolute;
   bottom: 0;
   right: 10px;
@@ -16,15 +16,15 @@
   margin-bottom: 10px;
 }
 
-.Footer-Btn{
+.Footer-Btn {
   background: none;
   border: none;
 }
 
-.Footer-Btn1-img{
+.Footer-Btn1-img {
   width: 50px;
 }
 
-.Footer-Btn2-img{
+.Footer-Btn2-img {
   width: 40px;
 }

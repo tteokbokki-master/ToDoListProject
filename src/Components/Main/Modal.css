@@ -1,78 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
 
-.Modal-Container{
+.Modal-Container {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgb(0, 0,0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
 }
-.Modal{
+.Modal {
   position: absolute;
   top: 50%;
-  left : 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  background-color: #DBE2EF;
-  border: 1px solid #3F72AF;
-  border-right: 4px solid #3F72AF;
-  border-bottom: 2px solid #3F72AF;
+  background-color: #dbe2ef;
+  border: 1px solid #3f72af;
+  border-right: 4px solid #3f72af;
+  border-bottom: 2px solid #3f72af;
   border-radius: 7px;
   width: 70%;
 }
 
-.Modal-Close{
+.Modal-Close {
   display: flex;
   justify-content: end;
 }
 
-.Modal-Close button{
+.Modal-Close button {
   padding-top: 5px;
   border: 0;
   background-color: transparent;
   cursor: pointer;
 }
 
-.Modal-Image{
+.Modal-Image {
   display: flex;
   justify-content: center;
 }
-.Modal-Image img{
+.Modal-Image img {
   width: 90%;
   padding-left: 20px;
 }
 
-.Modal-Content-1{
+.Modal-Content-1 {
   display: flex;
   justify-content: center;
 }
 
-.Modal-Content-1 p{
+.Modal-Content-1 p {
   font-family: 'Gasoek One', sans-serif;
   font-size: 35px;
   margin-bottom: 0;
-  color: #3F72AF;;
+  color: #3f72af;
   margin-top: 0;
-  text-shadow: -2px -2px #F9F7F7,
-  2px 2px #F9F7F7,
-  2px -2px #F9F7F7,
-  -2px 2px #F9F7F7;
+  text-shadow: -2px -2px #f9f7f7, 2px 2px #f9f7f7, 2px -2px #f9f7f7, -2px 2px #f9f7f7;
 }
 
-
-.Modal-Content-2{
+.Modal-Content-2 {
   display: flex;
   justify-content: center;
 }
 
-.Modal-Content-2 p{
+.Modal-Content-2 p {
   font-family: 'Gasoek One', sans-serif;
   font-size: 35px;
   margin-bottom: 0;
-  color: #3F72AF;;
+  color: #3f72af;
   margin-top: 0;
-  text-shadow: -2px -2px #F9F7F7,
-  2px 2px #F9F7F7,
-  2px -2px #F9F7F7,
-  -2px 2px #F9F7F7;
+  text-shadow: -2px -2px #f9f7f7, 2px 2px #f9f7f7, 2px -2px #f9f7f7, -2px 2px #f9f7f7;
+}
+
+@media (max-width: 480px) {
+  .Modal-Content-2 p,
+  .Modal-Content-1 p {
+    font-size: 25px;
+  }
 }

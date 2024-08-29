@@ -1,0 +1,45 @@
+{
+  "main": {
+    "header": {
+      "title": "todolist",
+      "year": " -",
+      "month": " -",
+      "day": " "
+    },
+    "TodoEditor": {
+      "placeholder": "Add a ToDo!",
+      "add": "Add"
+    },
+    "isDone": {
+      "Completed": "Completed",
+      "Incomplete": "Incomplete",
+      "quantity": ""
+    },
+    "button": {
+      "edit": "edit",
+      "del": "del",
+      "done": "edit",
+      "close": "cls"
+    },
+    "modal": {
+      "title": "Growth",
+      "ment": "Task Completed!"
+    }
+  },
+  "trash": {
+    "header": {
+      "title": "trash"
+    },
+    "button": {
+      "Restore": "Rst",
+      "Delete": "del",
+      "clear": "clear",
+      "home": "home"
+    },
+    "modal": {
+      "ment": "Empty trash?",
+      "yes": "Yes",
+      "no": "No"
+    }
+  }
+}

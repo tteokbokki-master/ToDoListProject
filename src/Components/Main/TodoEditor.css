@@ -1,43 +1,41 @@
-
-.TodoEditor{
+.TodoEditor {
   width: 95%;
 }
-.Editor{
+.Editor {
   margin-top: 10px;
   display: flex;
   gap: 3px;
 }
 
-.TodoEditor-input{
-  flex:10;
-  padding : 15px;
+.TodoEditor-input {
+  flex: 10;
+  padding: 15px;
   border-radius: 7px;
-  border: 1px solid #F9F7F7;
+  border: 1px solid #f9f7f7;
   cursor: pointer;
 }
 
-.TodoEditor-input:focus{
+.TodoEditor-input:focus {
   outline: none;
 }
 
-.TodoEditor-button{
-  flex:1.5;
+.TodoEditor-button {
+  flex: 1.5;
   border-radius: 7px;
-  border: 1px solid #F9F7F7;
-  background-color: #F9F7F7;
+  border: 1px solid #f9f7f7;
+  background-color: #f9f7f7;
   cursor: pointer;
 }
 
-.TodoEditor-button:hover{
+.TodoEditor-button:active {
   color: white;
   border: 1px solid white;
-  background-color: #3F72AF;
+  background-color: #3f72af;
   transition: background-color 0.5s ease;
 }
 
-
-.hr{
+.hr {
   margin-top: 30px;
-  background-color: #3F72AF;
+  background-color: #3f72af;
   padding: 0.5px;
 }

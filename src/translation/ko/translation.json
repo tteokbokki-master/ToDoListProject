@@ -1,0 +1,45 @@
+{
+  "main": {
+    "header": {
+      "title": "투두리스트",
+      "year": "년",
+      "month": "월",
+      "day": "일"
+    },
+    "TodoEditor": {
+      "placeholder": "오늘 뭐하지?..",
+      "add": "추가"
+    },
+    "isDone": {
+      "Completed": "완료",
+      "Incomplete": "미완료",
+      "quantity": "개"
+    },
+    "button": {
+      "edit": "수정",
+      "del": "삭제",
+      "done": "완료",
+      "close": "닫기"
+    },
+    "modal": {
+      "title": "성 장",
+      "ment": "할 일 완료!"
+    }
+  },
+  "trash": {
+    "header": {
+      "title": "휴지통"
+    },
+    "button": {
+      "Restore": "복구",
+      "Delete": "지우기",
+      "clear": "비우기",
+      "home": "홈으로"
+    },
+    "modal": {
+      "ment": "휴지통을 비우시겠습니까?",
+      "yes": "예",
+      "no": "아니오"
+    }
+  }
+}

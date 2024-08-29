@@ -1,10 +1,11 @@
-import './Header.css'
+import './Header.css';
+import { useTranslation } from 'react-i18next';
 
-export default function Header(){
-
-  return(
-    <div className='Header'>
-      <p>휴지통</p>
+export default function Header() {
+  const { t } = useTranslation();
+  return (
+    <div className="Header">
+      <p>{t('trash.header.title')}</p>
     </div>
-  )
+  );
 }

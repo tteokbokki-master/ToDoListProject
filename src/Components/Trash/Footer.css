@@ -1,7 +1,7 @@
-.Footer{
+.Footer {
   width: 100%;
 }
-.Footer-Btn{
+.Footer-Btn {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -10,18 +10,18 @@
   gap: 5px;
 }
 
-.Footer-Btn button{
+.Footer-Btn button {
   height: 40px;
   border-radius: 7px;
   border: 1px solid lightgray;
   font-weight: bold;
   cursor: pointer;
-  width:70px;
+  width: 70px;
 }
 
-.Footer-Btn button:hover{
+.Footer-Btn button:active {
   color: white;
-  background-color: #3F72AF;
+  background-color: #3f72af;
   transition: background-color 0.5s ease;
   border: 1px solid white;
 }

@@ -5,6 +5,12 @@
   display: flex;
   justify-content: end;
   margin-right: 10px;
+  position: relative;
+}
+#select {
+  position: absolute;
+  align-self: center;
+  left: 10px;
 }
 
 .Home-Footer {

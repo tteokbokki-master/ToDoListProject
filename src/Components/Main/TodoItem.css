@@ -1,56 +1,56 @@
-.TodoItem{
+.TodoItem {
   display: flex;
   align-items: center;
-  border-top: 0.5px solid #3F72AF;
-  border-left: 0.5px solid #3F72AF;
-  border-right: 4px solid #3F72AF;
-  border-bottom: 1.5px solid #3F72AF;
+  border-top: 0.5px solid #3f72af;
+  border-left: 0.5px solid #3f72af;
+  border-right: 4px solid #3f72af;
+  border-bottom: 1.5px solid #3f72af;
   background-color: rgb(252, 252, 252);
   border-radius: 7px;
   padding: 5px 0;
 }
 
-input[type="checkbox"]+label{
+input[type='checkbox'] + label {
   margin-left: 10px;
   width: 50px;
   height: 50px;
   background: url('./assets/isDone_X.png') no-repeat 0 0px / contain;
 }
 
-input[type='checkbox']:checked+label {
+input[type='checkbox']:checked + label {
   background: url('./assets/isDone_O.png') no-repeat 0 0px / contain;
 }
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: none;
 }
 
-.TodoItem_content_false{
+.TodoItem_content_false {
   text-align: center;
   flex: 1;
 }
-.TodoItem_content_true{
+.TodoItem_content_true {
   text-align: center;
   flex: 1;
   text-decoration: line-through;
   text-decoration-thickness: 3px;
-  text-decoration-color: #3F72AF;
+  text-decoration-color: #3f72af;
 }
 
-.falseItem{
+.falseItem {
   display: flex;
-  flex : 1;
+  flex: 1;
   align-items: center;
 }
 
-.trueItem{
+.trueItem {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.TodoItem-EdiBtn, .TodoItem-DelBtn{
+.TodoItem-EdiBtn,
+.TodoItem-DelBtn {
   margin-right: 5px;
   width: 40px;
   height: 30px;
@@ -61,30 +61,33 @@ input[type="checkbox"] {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-.TodoItem-EdiBtn-1, .TodoItem-DelBtn-1{
+.TodoItem-EdiBtn-1,
+.TodoItem-DelBtn-1 {
   margin-right: 5px;
-  width:  40px;
+  width: 40px;
   height: 30px;
   border-radius: 7px;
   border: 1px solid lightgray;
   font-weight: bold;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.btn{
+.btn {
   display: flex;
   justify-content: center;
   align-items: baseline;
 }
-.TodoItem-EdiBtn:hover,.TodoItem-EdiBtn-1:hover, .TodoItem-DelBtn:hover,.TodoItem-DelBtn-1:hover{
+.TodoItem-EdiBtn:active,
+.TodoItem-EdiBtn-1:active,
+.TodoItem-DelBtn:active,
+.TodoItem-DelBtn-1:active {
   color: white;
-  background-color: #3F72AF;
+  background-color: #3f72af;
   transition: background-color 0.5s ease;
   border: 1px solid white;
 }
 
-
-.TodoItem-input{
+.TodoItem-input {
   flex: 1;
   /* width: 260px; */
   padding: 16px 0;
